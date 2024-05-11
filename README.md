@@ -3,7 +3,8 @@
 Formally, the SOM algorithm can be described as a process that maps high-dimensional input data to elements arranged in a low-dimensional matrix, thus reducing the dimensionality of complex topological spaces.
 
 The object receives a list of features of up to three dimensions and maps the topology of the input data. Once the network is trained, it receives a list of features and outputs the nearest neuron's weights for each input.
-`som` is a partial result of research that aims to creatively appropriate `machine learning` algorithms and mechanisms in the context of `live-electronic` music. Thus, presents some features that are not present in the original algorithm or are not commonly implemented in `Self-organized maps` such as `negative learning rate` (that allows `som` "unlearn" the data topology ) and ``probability factor`` (that controls the search for the nearest neuron weight). 
+`som` is a partial result of research that aims to creatively appropriate of `machine learning` algorithms and mechanisms in the context of `live-electronic` music. Thus, it presents some features that are not present in the original algorithm (or are not commonly implemented in `Self-organized maps`), such as `negative learning rate` (that allows `som` to "unlearn" the data topology ) and ``probability factor`` (that controls the probability of the choice for the nearest neuron weight). 
+
 Binary files are accompanied by a patch that shows the application of some of these functions in the context of music creation.
 
 
