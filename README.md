@@ -1,5 +1,5 @@
 # pd-som
-`som` is an implementation of `Kohonen's Self-organized Maps (SOM)` a competitive unsupervised neural network proposed by `Teuvo Kohonen` in the paper[Self-organized formation of topologically correct feature maps](https://link.springer.com/article/10.1007/BF00337288). 
+`som` is a Pure Data external implementation of `Kohonen's Self-organized Maps (SOM)` a competitive unsupervised neural network proposed by `Teuvo Kohonen` in the paper[Self-organized formation of topologically correct feature maps](https://link.springer.com/article/10.1007/BF00337288). 
 Formally, the SOM algorithm can be described as a process that maps high-dimensional input data to elements arranged in a low-dimensional matrix, thus reducing the dimensionality of complex topological spaces.
 
 The object receives a list of features of up to three dimensions and maps the topology of the input data. Once the network is trained, it receives a list of features and outputs the nearest neuron's weights for each input.
