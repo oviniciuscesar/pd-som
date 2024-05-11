@@ -93,6 +93,7 @@ typedef struct _som {
 } t_som; 
 
 
+void error(const char *fmt, ...) ATTRIBUTE_FORMAT_PRINTF(1, 2);
 
 //------- recebe lista com número de neurônios e tamanho do vetor de pesos, e aloca memórica necessária para a matriz e os vetores-------//
 void som_neuron_size(t_som *x, t_symbol *s, int argc, t_atom *argv){ 
