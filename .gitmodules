@@ -4,3 +4,6 @@
 [submodule "Resources/pd.build"]
 	path = Resources/pd.build
 	url = https://github.com/charlesneimog/pd.cmake
+[submodule "Resources/pd.cmake"]
+	path = Resources/pd.cmake
+	url = https://github.com/pure-data/pd.cmake.git
