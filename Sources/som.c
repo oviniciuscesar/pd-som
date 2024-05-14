@@ -260,6 +260,7 @@ void som_print(t_som *x) {
     post("current epoch: %0.1f", x->x_iter);
     post("topology: %0.1f", x->x_topo);
     post("neighbor radius: %0.2f", x->x_raiovizi);
+    post("probability: %0.3f", x->x_proba);
 
    // Imprime os pesos dos neurônios
      for (i = 0; i < x->x_neurons; i++) {
@@ -435,7 +436,7 @@ static void trained_mode(t_som *x){
         x->x_d += gsl_vector_get(x->d, j);
         } 
         gsl_vector_set(x->dist, k, sqrt(x->x_d)); //distâncias entre o dado de entrada e todos os neurônios 
-        post("dist: %0.3f", gsl_vector_get(x->dist, k));
+        // post("dist: %0.3f", gsl_vector_get(x->dist, k));
     }
 
 
@@ -465,7 +466,7 @@ static void trained_mode(t_som *x){
     int win_index;
     gsl_sort_vector(x->win);
     for (i = 0; i < x->x_neurons; i++){
-        post("dist ordenada: %0.3f", gsl_vector_get(x->win, i)); 
+        // post("dist ordenada: %0.3f", gsl_vector_get(x->win, i)); 
 
         }
     
@@ -477,20 +478,20 @@ static void trained_mode(t_som *x){
            
         }       
     }
-    post("indice winner %d:", win_index);
+    // post("indice winner %d:", win_index);
 
         
 //------------------------- seleciona neurônio vencedor a partir de uma probabilidade ---------------------//  
     
     int indice = 0;  // Inicialize o índice com um valor que indique nenhum vencedor encontrado
-    srand(time(NULL));
+    // srand(time(NULL));
 
     for (i = 0; i < x->x_neurons; i++) {
         float p = (double)rand()/RAND_MAX;
         if (p < x->x_proba){
         indice = i;
-        post("proba win index %d:", indice);
-        post("p %0.3f:", p);
+        // post("proba win index %d:", indice);
+        // post("p %0.3f:", p);
         break;
         } 
     }
@@ -502,7 +503,7 @@ static void trained_mode(t_som *x){
         }
     }
 
-    post("proba dist index %d:", proba_index);
+    // post("proba dist index %d:", proba_index);//esse é o indice do neurônio vencedor quando o fator de probabilidade está em jogo
 
 
 
@@ -527,13 +528,13 @@ static void trained_mode(t_som *x){
     x->x_peso_win[win].a_type = A_FLOAT;
     
     for(i = 0; i < x->x_vec; i++){
-        SETFLOAT (x->x_peso_win + i, gsl_matrix_get (x->m, win_index, i));
+        SETFLOAT (x->x_peso_win + i, gsl_matrix_get (x->m, proba_index, i)); //troquei win_index pelo proba_index para incorporar a funçõa proba no código
         
     }
 
     x->x_index[1].a_type = A_FLOAT;
 
-    SETFLOAT (x->x_index, win_index);
+    SETFLOAT (x->x_index, proba_index); //troquei win_index pelo proba_index para incorporar a funçõa proba no código
 
     outlet_anything(x->out1, gensym("winner"), x->x_vec, x->x_peso_win);
     outlet_anything(x->out1, gensym("index"), 1, x->x_index);
