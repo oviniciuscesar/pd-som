@@ -21,7 +21,7 @@ Binary files are accompanied by a patch that shows the application of some of th
 5. `cmake --build build`;
 
 
-Binaries for macOS, Windows, and Linux are provided [here:](https://github.com/oviniciuscesar/pd-som/releases/tag/v0.1b) 
+Binaries for macOS, Windows, and Linux are provided [here](https://github.com/oviniciuscesar/pd-som/releases/tag/v0.1b) 
 If they are not working in some specific architecture or system, please contact me. 
 `som` was tested on macOS (Sonoma 14.5), Windows 10 64 bits, and Ubuntu 22.04.2 LTS 64 bits running Pure Data Vanilla 0.54-1).
 
