@@ -6,6 +6,7 @@ The object receives a list of features of up to three dimensions and maps the to
 `som` is a partial result of research that aims to creatively appropriate of `machine learning` algorithms and mechanisms in the context of `live-electronic` music. Thus, it presents some features that are not present in the original algorithm (or are not commonly implemented in `Self-organized maps`), such as `negative learning rate` (that allows `som` to "unlearn" the data topology ) and ``probability factor`` (that controls the probability of the choice for the nearest neuron weight). 
 
 Binaries for macOS, Windows, and Linux are provided [here](https://github.com/oviniciuscesar/pd-som/releases/tag/v0.1b) 
+
 If they are not working in some specific architecture or system, please contact me. 
 `som` was tested on macOS (Sonoma 14.5), Windows 10 64 bits, and Ubuntu 22.04.2 LTS 64 bits running Pure Data Vanilla 0.54-1).
 Binary files are accompanied by a patch that shows the application of some of these functions in the context of music creation.
