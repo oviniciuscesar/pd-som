@@ -20,7 +20,7 @@ Binary files are accompanied by a patch that shows the application of some of th
 `som` uses `pd.build`. To build the external on Linux, Mac, and Windows (using Mingw64):
 
 1. `git clone https://github.com/oviniciuscesar/pd-som/ --recursive`;
-2. `cd pd-perceptron`;
+2. `cd pd-som`;
 4. `cmake . -B build`;
 5. `cmake --build build`;
 
