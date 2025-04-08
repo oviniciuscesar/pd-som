@@ -17,7 +17,7 @@ Binary files are accompanied by a patch that shows the application of some of th
 
 # Build
 > [!NOTE]
-`som` uses `pd.build`. To build the external on Linux, Mac, and Windows (using Mingw64):
+`som` uses [pd.cmake](https://github.com/pure-data/pd.cmake). To build the external on Linux, Mac, and Windows (using Mingw64):
 
 1. `git clone https://github.com/oviniciuscesar/pd-som/ --recursive`;
 2. `cd pd-som`;
